@@ -1,0 +1,3 @@
+/*6. Write a SQL statement to display specific columns such as names and commissions for all salespeople.*/
+SELECT name, commissions
+FROM salesman;
