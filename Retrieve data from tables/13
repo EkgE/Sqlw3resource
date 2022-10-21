@@ -1,0 +1,5 @@
+/*13. From the following table, write a SQL query to find the Nobel Prize winner in ‘Literature’ for 1970. Return winner.*/
+SELECT winner 
+FROM nobel_win
+WHERE category = 'Literature' AND 
+      year = 1970;
