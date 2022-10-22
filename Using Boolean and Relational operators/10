@@ -1,0 +1,7 @@
+/*10. Write a SQL query that displays order number, purchase amount, and the achieved and unachieved percentage (%) for those orders that exceed 50% of the target value of 6000.. */
+SELECT ord_no,  purch_amt, 
+CASE 
+  WHEN 6000 * 0.5 > purch_amt THEN 'Target not achieved'
+  ELSE 'Target achieved'
+  END 
+FROM orders;
