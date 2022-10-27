@@ -1,0 +1,12 @@
+/*4. From the following tables write a SQL query to find salespeople who received commissions of more than 12 percent from the company. Return Customer Name, customer city, Salesman, commission. */
+SELECT 
+    customer.cust_name, 
+    customer.city,
+    salesman.salesman_name, 
+    salesman.commission
+FROM customer 
+INNER JOIN salesman 
+ON INNER JOIN salesman.salesman_id = customer.salesman_id
+WHERE salesman.commission > 0.12;
+
+	
