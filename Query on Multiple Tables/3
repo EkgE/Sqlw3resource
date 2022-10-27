@@ -1,0 +1,11 @@
+/*3. From the following tables, write a SQL query to find those salespeople who generated orders for their customers but are not located in the same city. Return ord_no, cust_name, customer_id (orders table), salesman_id (orders table).*/
+SELECT 
+	customer.customer_id, 
+    customer_cust_name, 
+    salesman.salesman_id, 
+    orders.ord_no
+FROM customer, salesman, orders
+WHERE 
+	salesman.salesman_id = orders.salesman_id AND
+    customer.customer_id = orders.customer_id AND
+    salesman.city != customer.city;
