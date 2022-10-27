@@ -1,0 +1,16 @@
+/*6. From the following tables write a SQL query to find the details of an order. Return ord_no, ord_date, purch_amt, Customer Name, grade, Salesman, commission. */
+SELECT 
+	orders.ord_date, 
+    orders.purch_amt, 
+    orders.ord_no, 
+    customer.cust_name, 
+    customer.grade, 
+    salesman.name, 
+    salesman.commision
+FROM orders 
+INNER JOIN customer 
+ON orders.customer_id = orders.customer_id
+INNER JOIN salesman 
+ON orders.salesman_id = salesman.salesman_id
+
+	
