@@ -1,0 +1,18 @@
+/*14.Write a SQL statement to make a list for the salesmen who either work for one or more customers or yet to join any of the customer. The customer, may have placed, either one or more orders on or above order amount 2000 and must have a grade, or he may not have placed any order to the associated supplier.*/
+SELECT 
+    customer.name, 
+    customer.city,
+    customer.grade, 
+    salesman.name,
+    orders.ord_no, 
+    orders.ord_date, 
+    orders.purch_amt
+FROM salesman 
+RIGHT JOIN customer
+ON customer.customer_id = salesman.customer_id
+LEFT JOIN orders
+ON orders.customer_id = customer.customer_id;
+WHERE 
+	grade IS NOT NULL AND 
+    orders.ord_no > 2000
+    
