@@ -1,0 +1,10 @@
+/*21. From the following tables write a SQL query to select all rows from both participating tables as long as there is a match between pro_com and com_id. */
+SELECT *
+FROM company_mast 
+INNER JOIN item_mast
+WHERE 
+	company_mast.com_id = item_mast.pro_id;
+
+ 
+
+    
