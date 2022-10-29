@@ -2,8 +2,7 @@
 SELECT *
 FROM company_mast 
 INNER JOIN item_mast
-WHERE 
-	company_mast.com_id = item_mast.pro_id;
+ON company_mast.com_id = item_mast.pro_id;
 
  
 
