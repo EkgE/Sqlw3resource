@@ -1,0 +1,6 @@
+/*25. From the following tables write a SQL query to find the most expensive product of each company. Return pro_name, pro_price and com_name. */
+SELECT item_mast.pro_name, max(item_mast.pro_price), company_mast.com_name 
+FROM item_mast 
+INNER JOIN company_mast
+ON company_mast.com_id = item_mast.pro_id
+GROUP BY company_mast.com_name;
