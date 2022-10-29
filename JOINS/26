@@ -1,0 +1,10 @@
+/*26. From the following tables write a SQL query to display all the data of employees including their department. */
+SELECT emp_details.*, DPT_NAME.name 
+FROM emp_details 
+JOIN emp_department
+ON emp_details.EMP_DEPT = emp_department.EMP_DEPT;
+
+
+ 
+
+    
