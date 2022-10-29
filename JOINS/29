@@ -1,0 +1,13 @@
+/*29. From the following tables write a SQL query to find the names of departments where more than two employees are employed. Return dpt_name.*/
+SELECT emp_department.name
+FROM emp_details , 
+JOIN emp_department
+ON  emp_details.EMP_DEPT = emp_department.EMP_DEPT
+GROUP BY emp_department.name
+HAVING COUNT(*) > 2;
+
+
+
+ 
+
+    
