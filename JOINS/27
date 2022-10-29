@@ -1,0 +1,10 @@
+/*27. From the following tables write a SQL query to display the first and last names of each employee, as well as the department name and sanction amount. */
+SELECT emp_details.emp_fname, emp_details.emp_lname, DPT_NAME.name, DPT_NAME.DPT_ALLOTMENT
+FROM emp_details 
+JOIN emp_department
+ON emp_details.EMP_DEPT = emp_department.EMP_DEPT;
+
+
+ 
+
+    
