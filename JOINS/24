@@ -1,0 +1,11 @@
+/*24. From the following tables write a SQL query to calculate and find the average price of items of each company higher than or equal to Rs. 350. Return average value and company name. */
+SELECT AVG(item_mast.pro_price), company_mast.com_name 
+FROM item_mast 
+INNER JOIN company_mast
+ON company_mast.com_id = item_mast.pro_id
+GROUP BY company_mast.com_name 
+WHERE AVG(item_mast.pro_price) > 350;
+
+ 
+
+    
