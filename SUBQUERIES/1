@@ -1,0 +1,7 @@
+/*1. From the following tables, write a SQL query to find all the orders issued by the salesman 'Paul Adam'. Return ord_no, purch_amt, ord_date, customer_id and salesman_id.*/
+
+SELECT Orders.ord_no, Orders.purch_amt, Orders.ord_date, Orders.customer_id, Orders.salesman_id
+FROM Orders 
+JOIN Salesman 
+ON Orders.salesman_id = Salesman.salesman_id 
+WHERE Salesman.name = 'Paul Adam';
