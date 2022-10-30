@@ -1,0 +1,7 @@
+/*6. From the following tables write a SQL query to determine the commission of the salespeople in Paris. Return commission.*/
+
+SELECT commision
+FROM Salesman 
+WHERE salesman_id IN (SELECT salesman_id    
+                      FROM Customer
+                      WHERE city = 'Paris');  
