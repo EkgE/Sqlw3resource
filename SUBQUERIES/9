@@ -1,0 +1,9 @@
+/*9. From the following tables, write a SQL query to find those salespeople who earned the maximum commission. Return ord_no, purch_amt, ord_date, and salesman_id.*/
+
+SELECT Orders.ord_no, Orders.purch_amt, Orders.ord_date, Salesman_id
+FROM  Orders
+WHERE salesman_id IN (SELECT salesman_id
+                    FROM Salesman
+                    WHERE commission = MAX(commission)) 
+       
+	
