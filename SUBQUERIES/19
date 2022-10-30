@@ -1,0 +1,10 @@
+/*19. From the following tables write a SQL query to find the salespeople who deal with those customers who live in the same city. Return salesman_id, name, city and commission.*/
+
+SELECT salesman.* 
+FROM salesman
+WHERE CITY IN (
+  SELECT CITY FROM CUSTOMER 
+	WHERE salesman.salesman_id and customer.salesman_id);
+		
+
+  	
