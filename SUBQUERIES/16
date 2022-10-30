@@ -1,0 +1,8 @@
+/*16. From the following tables write a SQL query to find salespeople who deal with multiple customers. Return salesman_id, name, city and commission.*/
+SELECT * 
+FROM SALESMAN 
+WHERE 1 < (SELECT COUNT(*) 
+           FROM CUSTOMER 
+           GROUP BY SALESMAN_id
+           HAVING customer.salesman_id = salesman.salesman_id
+          );
