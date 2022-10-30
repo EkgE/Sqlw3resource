@@ -1,0 +1,6 @@
+/*18. From the following tables, write a SQL query to find the salespeople who deal the customers with more than one order. Return salesman_id, name, city and commission.*/
+SELECT *
+FROM Salesman 
+WHERE 1 < (SELECT COUNT(*)
+           FROM Orders
+           WHERE Orders.salesman_id = salesman.salesman_id);
